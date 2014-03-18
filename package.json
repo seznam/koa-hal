@@ -1,6 +1,6 @@
 {
   "name": "koa-hal",
-  "version": "1.0.1",
+  "version": "1.0.1-1",
   "description": "hal+json middleware for Koa",
   "main": "index.js",
   "scripts": {
@@ -26,5 +26,9 @@
   },
   "dependencies": {
     "halson": "^1.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seznam/koa-hal"
   }
 }
