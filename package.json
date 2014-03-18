@@ -1,0 +1,30 @@
+{
+  "name": "koa-hal",
+  "version": "1.0.0",
+  "description": "hal+json middleware for Koa",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --harmony --reporter spec --bail test.js"
+  },
+  "keywords": [
+    "koa",
+    "middleware",
+    "mediatype",
+    "HAL",
+    "JSON",
+    "REST",
+    "Hypermedia",
+    "HATEOAS",
+    "API"
+  ],
+  "author": "Seznam.cz, a.s.",
+  "license": "MIT",
+  "devDependencies": {
+    "koa": "^0.5.1",
+    "mocha": "^1.18.0",
+    "supertest": "^0.9.0"
+  },
+  "dependencies": {
+    "halson": "^1.0.3"
+  }
+}
