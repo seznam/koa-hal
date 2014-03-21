@@ -16,12 +16,17 @@ var app = require('koa')();
 app.use(koahal());
 
 app.use(function*(){
-    var nested = new hal.Resource({title: 'Nested Resrouce'}, '/lorem/nested');
-    var resource = new hal.Resource({title: 'Lorem Ipsum'}, '/lorem')
-        .set('description', 'Lorem ipsum dolor sit amet')
-        .set('aNumber', 1000)
-        .set('aBoolean', true)
-        .embed('nested', nested);
+    var nested = hal({title: 'Nested Resrouce'})
+        .addLink('self', '/lorem/nested');
+
+    var resource = hal({title: 'Lorem Ipsum'})
+        .addLink('self', '/lorem')
+        .addEmbed('nested', nested);
+
+    resource.description = 'Lorem ipsum dolor sit amet';
+    resource.aNumber = 1000;
+    resource.aBoolean = true;
+
     this.body = resource;
 });
 

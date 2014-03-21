@@ -5,11 +5,11 @@ var koa = require('koa');
 var hal = require('halson');
 
 describe('koa-hal', function() {
-    it('should convert hal.Resource', function(done) {
+    it('should convert HAL+JSON Resource to JSON', function(done) {
         var app = koa();
         app.use(koahal());
         app.use(function*() {
-            this.body = new hal.Resource({title: 'Lorem Ipsum'}, '/lorem');
+            this.body = hal({title: 'Lorem Ipsum'}).addLink('self', '/lorem');
         });
 
         request(app.listen())
@@ -24,7 +24,7 @@ describe('koa-hal', function() {
             });
     });
 
-    it('should ignore non-hal.Resource', function() {
+    it('should ignore non-HAL body', function() {
         var app = koa();
         app.use(koahal());
         app.use(function*() {

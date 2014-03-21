@@ -5,7 +5,7 @@ module.exports = function(spacer){
         yield next;
         if (this.body && (this.body.className === hal.Resource.prototype.className)) {
             this.set("Content-Type", "application/hal+json");
-            this.body = this.body.toJSON(spacer);
+            this.body = JSON.stringify(this.body, null, spacer);
         }
     };
 };
