@@ -1,7 +1,9 @@
 # koa-hal
+[![Build Status](https://travis-ci.org/seznam/koa-hal.svg?branch=master)](https://travis-ci.org/seznam/koa-hal)
+
 hal+json middleware for Koa
 
-## Install
+## Installation
 ```sh
 $ npm install koa-hal
 ```

@@ -4,7 +4,7 @@
   "description": "hal+json middleware for Koa",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --harmony --reporter spec --bail test.js"
+    "test": "mocha --harmony --reporter spec test.js"
   },
   "keywords": [
     "koa",
