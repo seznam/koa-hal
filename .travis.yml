@@ -1,3 +1,11 @@
 language: node_js
 node_js:
-  - "0.11"
+  - '0.11'
+deploy:
+  provider: npm
+  email: juraj@hajovsky.sk
+  api_key:
+    secure: YJlsBkxacMyJkF3sunZncZTJHl8i3s/soYMUHvqsPFEPNN7aGOVb8wf0Rv7Bo46yNfs5omAo/Kd9o1vo9TgSuf/JJ2yc42Q1/B2ZHNsXDIyZgeYXFNQjGHneUfTx/wHeVyCTiUX9W7PF4YKZmud3nDSdkf/tzeNmGpFLhrNYo+g=
+  on:
+    tags: true
+    repo: seznam/koa-hal
